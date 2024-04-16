@@ -26,11 +26,13 @@ public class TestArrayListString {
 		for(String texto : lista1) {
 			System.out.println(texto);
 		}
+	
 		
 		System.out.println(lista2.size());
 		for(String texto : lista2) {
 			System.out.println(texto);
 		}
+		
 	}
 
 }
