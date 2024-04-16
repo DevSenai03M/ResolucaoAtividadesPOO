@@ -25,5 +25,4 @@ public class CamaroteSuperior extends Vip {
 				(this.getValor() + this.getValorAdicional() +
 						this.addValor); 
 	}
-
 }
