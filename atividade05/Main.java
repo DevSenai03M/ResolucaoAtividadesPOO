@@ -1,5 +1,6 @@
 package atividade05;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -55,10 +56,14 @@ public class Main {
 					System.out.printf("(%d) : %s\n", i+1, db_agenda.get(i).getNome());
 				}
 				
-				System.out.print("Selecione uma opção: ");
-				int opt_agenda = Integer.parseInt(scan.nextLine());
-				
-				System.out.println(db_agenda.get(opt_agenda-1).toString());
+				try {
+					System.out.print("Selecione uma opção: ");
+					int opt_agenda = Integer.parseInt(scan.nextLine());
+					
+					System.out.println(db_agenda.get(opt_agenda-1).toString());
+				}catch(IndexOutOfBoundsException e) {
+					System.out.println("Opção selecionada indisponível!");	
+				}
 			break;
 			case 3:
 				System.out.println("Bye :)");
